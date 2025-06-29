@@ -550,9 +550,6 @@ document.addEventListener('DOMContentLoaded', () => {
             contactForm.addEventListener('submit', handleFormSubmit);
         }
         
-        // Térkép betöltés ellenőrzése
-        checkMapLoading();
-        
     } catch (error) {
         console.error('Error initializing website:', error);
     }
@@ -614,27 +611,4 @@ function handleFormSubmit(event) {
 
 function handleImageError(event) {
     event.target.src = 'https://via.placeholder.com/400x300?text=Kép+nem+elérhető';
-}
-
-// Térkép betöltés ellenőrzése
-function checkMapLoading() {
-    const iframe = document.querySelector('iframe[title="Party Sziget üzlet térképe"]');
-    const fallback = document.getElementById('map-fallback');
-    
-    if (iframe && fallback) {
-        // 3 másodperc múlva ellenőrizzük, hogy betöltődött-e a térkép
-        setTimeout(() => {
-            try {
-                // Ha az iframe src nem töltődött be, megjelenítjük a fallback-ot
-                if (iframe.contentWindow.location.href === 'about:blank' || 
-                    iframe.contentWindow.location.href === 'data:,' ||
-                    iframe.contentWindow.location.href === '') {
-                    fallback.classList.remove('hidden');
-                }
-            } catch (e) {
-                // Ha hiba van (pl. CORS), megjelenítjük a fallback-ot
-                fallback.classList.remove('hidden');
-            }
-        }, 3000);
-    }
 } 
