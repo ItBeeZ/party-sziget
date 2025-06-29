@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="hu">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Party Sziget - Ajándékok és Dekorációk Szeghalom | Ballagási, Szülinapi Ajándékok</title>
-    <meta name="description" content="Party Sziget ajándéküzlet Szeghalomban. Egyedi ajándékok, dekorációk, virágok, plüssök ballagásra, szülinapra és minden alkalomra. Gyors szállítás, személyre szabott csomagolás.">
+    <title>Party Sziget - Ajándékok és Dekorációk Szeghalom</title>
+    <meta name="description" content="Party Sziget ajándéküzlet Szeghalomban. Egyedi ajándékok, dekorációk, virágok, plüssök ballagásra és szülinapra. Gyors szállítás.">
     <meta name="keywords" content="ajándék, dekoráció, virág, plüss, ballagás, szülinap, Party Sziget, Szeghalom">
     <meta name="author" content="Party Sziget">
     <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://partysziget.hu/">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Party Sziget - Ajándékok és Dekorációk Szeghalom">
@@ -28,14 +31,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap" as="style">
-    
-    <!-- Stylesheets -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap">
     
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -68,7 +66,7 @@
         "hasMap": "https://maps.google.com/?q=5520+Szeghalom,+Tildy+Z.+25."
     }
     </script>
-</head>
+  </head>
 <body class="w-full min-h-screen bg-white">
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
@@ -274,25 +272,69 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                                 <div>
                                     <label for="name" class="block text-gray-700 mb-1">Név *</label>
-                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" required aria-required="true">
+                                    <input type="text" id="name" name="name" autocomplete="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" required aria-required="true">
                                 </div>
                                 <div>
                                     <label for="email" class="block text-gray-700 mb-1">E-mail *</label>
-                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" required aria-required="true">
+                                    <input type="email" id="email" name="email" autocomplete="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" required aria-required="true">
                                 </div>
                             </div>
                             <div class="mb-4">
                                 <label for="subject" class="block text-gray-700 mb-1">Tárgy *</label>
-                                <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" required aria-required="true">
+                                <input type="text" id="subject" name="subject" autocomplete="off" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" required aria-required="true">
                             </div>
                             <div class="mb-6">
                                 <label for="message" class="block text-gray-700 mb-1">Üzenet *</label>
-                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" required aria-required="true"></textarea>
+                                <textarea id="message" name="message" autocomplete="off" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" required aria-required="true"></textarea>
                             </div>
                             <button type="submit" class="bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500">
                                 Üzenet küldése
                             </button>
                         </form>
+                    </div>
+                </div>
+                
+                <!-- Google Maps -->
+                <div class="mt-12">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <div class="p-6 border-b border-gray-200">
+                            <h3 class="text-2xl font-bold text-purple-700 mb-2">Hol találsz minket?</h3>
+                            <p class="text-gray-600">Látogass el üzletünkbe a Szeghalom központjában!</p>
+                        </div>
+                        <div class="relative">
+                            <iframe 
+                                src="https://www.google.com/maps?q=5520+Szeghalom,+Tildy+Z.+25.&output=embed"
+                                width="100%" 
+                                height="400" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Party Sziget üzlet térképe"
+                                aria-label="Google Maps térkép a Party Sziget üzlet helyéről Szeghalomban">
+                            </iframe>
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg">
+                                <div class="flex items-center space-x-2">
+                                    <i data-lucide="map-pin" class="h-5 w-5 text-purple-600" aria-hidden="true"></i>
+                                    <span class="text-sm font-semibold text-gray-800">Party Sziget</span>
+                                </div>
+                                <p class="text-xs text-gray-600 mt-1">5520 Szeghalom, Tildy Z. 25.</p>
+                            </div>
+                            <!-- Fallback gomb ha az iframe nem működik -->
+                            <div class="absolute inset-0 flex items-center justify-center bg-gray-100 bg-opacity-90 hidden" id="map-fallback">
+                                <div class="text-center p-6">
+                                    <i data-lucide="map" class="h-16 w-16 text-purple-600 mx-auto mb-4" aria-hidden="true"></i>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-2">Térkép betöltése</h4>
+                                    <p class="text-gray-600 mb-4">Kattints a gombra a térkép megnyitásához</p>
+                                    <a href="https://www.openstreetmap.org/search?query=Szeghalom%2C%20Tildy%20Z.%2025.%2C%20Hungary" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       class="inline-block bg-purple-600 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                                        Megnyitás térképen
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -332,5 +374,5 @@
 
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,15 @@
+{
+  "name": "party-sziget",
+  "version": "1.0.0",
+  "description": "Party Sziget ajándéküzlet weboldala - modern, reszponzív dizájn",
+  "scripts": {
+    "build": "tailwindcss -i ./assets/css/styles.css -o ./assets/css/tailwind.css --minify",
+    "watch": "tailwindcss -i ./assets/css/styles.css -o ./assets/css/tailwind.css --watch"
+  },
+  "keywords": ["ajándék", "dekoráció", "weboldal", "szeghalom"],
+  "author": "Party Sziget",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^4.1.11"
+  }
+}

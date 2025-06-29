@@ -539,7 +539,20 @@ document.addEventListener('DOMContentLoaded', () => {
         initScrollAnimations();
         addInteractiveFeatures();
         
-        console.log('Party Sziget website initialized successfully');
+        // Add image error handling
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', handleImageError);
+        });
+        
+        // Add contact form submission handler
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', handleFormSubmit);
+        }
+        
+        // Térkép betöltés ellenőrzése
+        checkMapLoading();
+        
     } catch (error) {
         console.error('Error initializing website:', error);
     }
@@ -556,4 +569,72 @@ window.PartySziget = {
     loadProductCategories,
     loadTestimonials,
     isValidEmail
-}; 
+};
+
+/**
+ * Handle contact form submission
+ * @param {Event} event - Form submit event
+ */
+function handleFormSubmit(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+    
+    console.log('Form data:', data);
+    
+    // Validate form data
+    const { name, email, subject, message } = data;
+    
+    if (!name || !email || !subject || !message) {
+        showNotification('Kérjük, töltsd ki az összes mezőt!', 'error');
+        return;
+    }
+    
+    if (!isValidEmail(email)) {
+        showNotification('Kérjük, adj meg egy érvényes e-mail címet!', 'error');
+        return;
+    }
+    
+    // Simulate form submission
+    const submitBtn = event.target.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    
+    submitBtn.innerHTML = '<span class="loading"></span> Küldés...';
+    submitBtn.disabled = true;
+    
+    // Simulate API call
+    setTimeout(() => {
+        showNotification('Köszönjük az üzenetet! Hamarosan felvesszük veled a kapcsolatot.', 'success');
+        event.target.reset();
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }, 2000);
+}
+
+function handleImageError(event) {
+    event.target.src = 'https://via.placeholder.com/400x300?text=Kép+nem+elérhető';
+}
+
+// Térkép betöltés ellenőrzése
+function checkMapLoading() {
+    const iframe = document.querySelector('iframe[title="Party Sziget üzlet térképe"]');
+    const fallback = document.getElementById('map-fallback');
+    
+    if (iframe && fallback) {
+        // 3 másodperc múlva ellenőrizzük, hogy betöltődött-e a térkép
+        setTimeout(() => {
+            try {
+                // Ha az iframe src nem töltődött be, megjelenítjük a fallback-ot
+                if (iframe.contentWindow.location.href === 'about:blank' || 
+                    iframe.contentWindow.location.href === 'data:,' ||
+                    iframe.contentWindow.location.href === '') {
+                    fallback.classList.remove('hidden');
+                }
+            } catch (e) {
+                // Ha hiba van (pl. CORS), megjelenítjük a fallback-ot
+                fallback.classList.remove('hidden');
+            }
+        }, 3000);
+    }
+} 
