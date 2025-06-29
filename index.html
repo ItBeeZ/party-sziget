@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Party Sziget - Ajándékok és Dekorációk Szeghalom | Ballagási, Szülinapi Ajándékok</title>
+    <meta name="description" content="Party Sziget ajándéküzlet Szeghalomban. Egyedi ajándékok, dekorációk, virágok, plüssök ballagásra, szülinapra és minden alkalomra. Gyors szállítás, személyre szabott csomagolás.">
+    <meta name="keywords" content="ajándék, dekoráció, virág, plüss, ballagás, szülinap, Party Sziget, Szeghalom">
+    <meta name="author" content="Party Sziget">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Party Sziget - Ajándékok és Dekorációk Szeghalom">
+    <meta property="og:description" content="Egyedi ajándékok, dekorációk és meglepetések minden alkalomra a Party Sziget üzletben.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://partysziget.hu">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:locale" content="hu_HU">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Party Sziget - Ajándékok és Dekorációk">
+    <meta name="twitter:description" content="Egyedi ajándékok, dekorációk és meglepetések minden alkalomra.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap" as="style">
+    
+    <!-- Stylesheets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "Party Sziget",
+        "description": "Ajándékok és dekorációk üzlet Szeghalomban",
+        "url": "https://partysziget.hu",
+        "telephone": "+36 30 123 4567",
+        "email": "info@partysziget.hu",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Tildy Z. 25.",
+            "addressLocality": "Szeghalom",
+            "postalCode": "5520",
+            "addressCountry": "HU"
+        },
+        "openingHours": [
+            "Mo-Fr 09:00-17:00",
+            "Sa 09:00-13:00"
+        ],
+        "priceRange": "$$",
+        "currenciesAccepted": "HUF",
+        "paymentAccepted": "Cash, Credit Card",
+        "areaServed": "Szeghalom",
+        "hasMap": "https://maps.google.com/?q=5520+Szeghalom,+Tildy+Z.+25."
+    }
+    </script>
+</head>
+<body class="w-full min-h-screen bg-white">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
+        Ugrás a fő tartalomhoz
+    </a>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md" role="banner">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i data-lucide="gift" class="h-8 w-8 text-pink-500 mr-2" aria-hidden="true"></i>
+                    <span class="text-2xl font-bold text-purple-700 font-['Comic_Sans_MS', 'Marker_Felt', 'sans-serif']">
+                        Party Sziget
+                    </span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8" role="navigation" aria-label="Fő navigáció">
+                    <a href="#featured" class="text-purple-600 hover:text-pink-500 font-medium transition-colors">Termékek</a>
+                    <a href="#categories" class="text-purple-600 hover:text-pink-500 font-medium transition-colors">Kategóriák</a>
+                    <a href="#testimonials" class="text-purple-600 hover:text-pink-500 font-medium transition-colors">Vélemények</a>
+                    <a href="#contact" class="text-purple-600 hover:text-pink-500 font-medium transition-colors">Kapcsolat</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-purple-600 p-2" id="mobile-menu-btn" aria-label="Menü megnyitása" aria-expanded="false">
+                    <i data-lucide="menu" class="h-6 w-6" aria-hidden="true"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav class="mt-4 py-2 md:hidden hidden" id="mobile-menu" role="navigation" aria-label="Mobil navigáció">
+                <div class="flex flex-col space-y-4">
+                    <a href="#featured" class="text-purple-600 hover:text-pink-500 font-medium mobile-menu-link transition-colors">Termékek</a>
+                    <a href="#categories" class="text-purple-600 hover:text-pink-500 font-medium mobile-menu-link transition-colors">Kategóriák</a>
+                    <a href="#testimonials" class="text-purple-600 hover:text-pink-500 font-medium mobile-menu-link transition-colors">Vélemények</a>
+                    <a href="#contact" class="text-purple-600 hover:text-pink-500 font-medium mobile-menu-link transition-colors">Kapcsolat</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="w-full bg-gradient-to-r from-purple-400 via-pink-300 to-yellow-200 py-16 md:py-24" aria-labelledby="hero-title">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                        <h1 id="hero-title" class="text-4xl md:text-5xl font-bold text-white mb-4 font-['Comic_Sans_MS', 'Marker_Felt', 'sans-serif']">
+                            Ünnepeld az élet különleges pillanatait velünk!
+                        </h1>
+                        <p class="text-lg text-white mb-6">
+                            Egyedi ajándékok, dekorációk és meglepetések minden alkalomra a Party Sziget üzletben.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#categories" class="inline-block bg-yellow-400 hover:bg-yellow-300 text-purple-800 font-bold py-3 px-6 rounded-full shadow-lg transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                Fedezd fel a termékeket
+                            </a>
+                            <a href="#contact" class="inline-block bg-white hover:bg-gray-100 text-pink-500 font-bold py-3 px-6 rounded-full shadow-lg transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                                Kapcsolat
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <div class="relative w-full max-w-md">
+                            <div class="bg-white p-4 rounded-3xl shadow-xl transform rotate-3 relative z-20">
+                                <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                                     alt="Színes ajándékok és dekorációk a Party Sziget üzletben" 
+                                     class="w-full h-auto rounded-2xl"
+                                     loading="lazy">
+                            </div>
+                            <div class="absolute -top-4 -right-4 bg-yellow-300 p-3 rounded-full shadow-lg z-30">
+                                <i data-lucide="party-popper" class="h-8 w-8 text-purple-600" aria-hidden="true"></i>
+                            </div>
+                            <div class="absolute -bottom-4 -left-4 bg-pink-400 p-3 rounded-full shadow-lg z-30">
+                                <i data-lucide="gift" class="h-8 w-8 text-white" aria-hidden="true"></i>
+                            </div>
+                            <div class="absolute top-1/2 -translate-y-1/2 -left-8 bg-blue-300 p-3 rounded-full shadow-lg z-30">
+                                <i data-lucide="heart" class="h-8 w-8 text-pink-500" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section id="featured" class="py-16 bg-white" aria-labelledby="featured-title">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col items-center mb-12">
+                    <div class="flex items-center mb-3">
+                        <i data-lucide="star" class="h-6 w-6 text-yellow-400 mr-2" aria-hidden="true"></i>
+                        <h2 id="featured-title" class="text-3xl font-bold text-purple-700">Népszerű termékeink</h2>
+                        <i data-lucide="star" class="h-6 w-6 text-yellow-400 ml-2" aria-hidden="true"></i>
+                    </div>
+                    <p class="text-gray-600 text-center max-w-2xl">
+                        Fedezd fel legkedveltebb ajándékainkat és dekorációinkat, amelyek garantáltan mosolyt csalnak az ünnepelt arcára!
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="featured-products" role="list" aria-label="Népszerű termékek">
+                    <!-- Products will be loaded by JavaScript -->
+                </div>
+                <div class="mt-12 text-center">
+                    <a href="#categories" class="inline-block bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        Összes termék megtekintése
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Categories -->
+        <section id="categories" class="py-16 bg-gray-50" aria-labelledby="categories-title">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 id="categories-title" class="text-3xl font-bold text-purple-700 mb-3">Kategóriák</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Böngéssz különböző kategóriáink között, és találd meg a tökéletes ajándékot vagy dekorációt bármilyen alkalomra!
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="product-categories" role="list" aria-label="Termék kategóriák">
+                    <!-- Categories will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="py-16 bg-gradient-to-r from-purple-100 via-pink-50 to-yellow-50" aria-labelledby="testimonials-title">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 id="testimonials-title" class="text-3xl font-bold text-purple-700 mb-3">Vásárlóink mondták</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Nézd meg, mit gondolnak rólunk a vásárlóink! Célunk, hogy minden alkalomra tökéletes ajándékot és élményt nyújtsunk.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="testimonials-container" role="list" aria-label="Vásárlói vélemények">
+                    <!-- Testimonials will be loaded by JavaScript -->
+                </div>
+                <div class="mt-10 text-center">
+                    <a href="#testimonials" class="inline-block bg-transparent border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-bold py-2 px-6 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        Összes vélemény megtekintése
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-white" aria-labelledby="contact-title">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 id="contact-title" class="text-3xl font-bold text-purple-700 mb-3">Kapcsolat</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        Látogass el üzletünkbe vagy vedd fel velünk a kapcsolatot az alábbi elérhetőségeken!
+                    </p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-6">Üzletünk</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i data-lucide="map-pin" class="h-6 w-6 mr-4 mt-1 flex-shrink-0" aria-hidden="true"></i>
+                                <div>
+                                    <h4 class="font-semibold">Cím</h4>
+                                    <address class="not-italic">5520 Szeghalom, Tildy Z. 25.</address>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-lucide="phone" class="h-6 w-6 mr-4 mt-1 flex-shrink-0" aria-hidden="true"></i>
+                                <div>
+                                    <h4 class="font-semibold">Telefon</h4>
+                                    <a href="tel:+36301234567" class="hover:underline">+36 30 123 4567</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-lucide="clock" class="h-6 w-6 mr-4 mt-1 flex-shrink-0" aria-hidden="true"></i>
+                                <div>
+                                    <h4 class="font-semibold">Nyitvatartás</h4>
+                                    <p>Hétfő - Péntek: 9:00 - 17:00</p>
+                                    <p>Szombat: 9:00 - 13:00</p>
+                                    <p>Vasárnap: Zárva</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i data-lucide="mail" class="h-6 w-6 mr-4 mt-1 flex-shrink-0" aria-hidden="true"></i>
+                                <div>
+                                    <h4 class="font-semibold">E-mail</h4>
+                                    <a href="mailto:info@partysziget.hu" class="hover:underline">info@partysziget.hu</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex space-x-4">
+                            <a href="https://facebook.com/partysziget" class="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white" aria-label="Facebook oldalunk">
+                                <i data-lucide="facebook" class="h-6 w-6" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://instagram.com/partysziget" class="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white" aria-label="Instagram oldalunk">
+                                <i data-lucide="instagram" class="h-6 w-6" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 bg-gray-50 rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold text-purple-700 mb-6">Írj nekünk!</h3>
+                        <form id="contact-form" role="form" aria-labelledby="contact-form-title">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="name" class="block text-gray-700 mb-1">Név *</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" required aria-required="true">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 mb-1">E-mail *</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" required aria-required="true">
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 mb-1">Tárgy *</label>
+                                <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" required aria-required="true">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 mb-1">Üzenet *</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" required aria-required="true"></textarea>
+                            </div>
+                            <button type="submit" class="bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                Üzenet küldése
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-purple-900 text-white" role="contentinfo">
+        <div class="container mx-auto px-4 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <i data-lucide="gift" class="h-8 w-8 text-pink-400 mr-2" aria-hidden="true"></i>
+                    <span class="text-2xl font-bold text-white font-['Comic_Sans_MS', 'Marker_Felt', 'sans-serif']">
+                        Party Sziget
+                    </span>
+                </div>
+                <nav class="flex flex-wrap justify-center gap-6 md:gap-8" role="navigation" aria-label="Lábléc navigáció">
+                    <a href="#featured" class="text-gray-300 hover:text-pink-400 transition-colors">Termékek</a>
+                    <a href="#categories" class="text-gray-300 hover:text-pink-400 transition-colors">Kategóriák</a>
+                    <a href="#testimonials" class="text-gray-300 hover:text-pink-400 transition-colors">Vélemények</a>
+                    <a href="#contact" class="text-gray-300 hover:text-pink-400 transition-colors">Kapcsolat</a>
+                </nav>
+            </div>
+            <div class="border-t border-purple-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">
+                        © 2023 Party Sziget. Minden jog fenntartva.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="/adatvedelem" class="text-gray-400 hover:text-pink-400 transition-colors">Adatvédelmi irányelvek</a>
+                        <a href="/aszf" class="text-gray-400 hover:text-pink-400 transition-colors">Általános szerződési feltételek</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
